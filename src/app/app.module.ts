@@ -5,13 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
-import { TodoComponentComponent } from './todo-component/todo-component.component'
+import { TodoComponentComponent } from './todo-component/todo-component.component';
+import { TodoComponent } from './todo/todo.component';
+import { CreateTodoComponent } from './create-todo/create-todo.component';
+import { TodoListComponent } from './todo-list/todo-list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ConfirmationModalComponent,
-    TodoComponentComponent
+    TodoComponentComponent,
+    TodoComponent,
+    CreateTodoComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,

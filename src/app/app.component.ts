@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
     this.todoTitle = '';
     this.todoList = [
       // example of how to make an item in todo list
-      { title: 'Install Angular CLI', id: 1, description: ""},
+      //{ title: 'Install Angular CLI', id: 1, description: ""},
     
     ];
   }
@@ -24,11 +24,12 @@ export class AppComponent implements OnInit{
     this.todoList.push({
       title: this.todoTitle,
       id: this.todoId,
-      description: this.todoTitle
+      description: ''
     });
     
     // resets our todoTitle variable to an empty string
     this.todoTitle = '';
+    this.todoId++;
   }
   deleteTodo(todo:any) {
     const index = this.todoList.findIndex(todoItem => todoItem === todo);

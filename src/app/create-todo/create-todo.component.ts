@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import input from //wherever the input is
 
 @Component({
   selector: 'app-create-todo',
@@ -11,5 +12,6 @@ export class CreateTodoComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

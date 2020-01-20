@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { ITodo } from './interfaces/itodo';
 
 @Component({
   selector: 'app-root',
@@ -7,21 +8,23 @@ import { Component,OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'Todos';
-  todoList: any [] = [];
+  todoList: ITodo [] = [];
   todoTitle: string;
   todoId: number = 0;
+  
   ngOnInit() {
     this.todoTitle = '';
     this.todoList = [
       // example of how to make an item in todo list
-      { title: 'Install Angular CLI', isDone: false },
+      { title: 'Install Angular CLI', id: 1, description: ""},
     
     ];
   }
   addTodo():void {
     this.todoList.push({
       title: this.todoTitle,
-      isDone: false
+      id: this.todoId,
+      description: this.todoTitle
     });
     
     // resets our todoTitle variable to an empty string
